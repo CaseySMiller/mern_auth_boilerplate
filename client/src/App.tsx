@@ -7,6 +7,7 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
+import TopNav from './components/TopNav';
 
 // Construct the GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -35,6 +36,7 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
+      <TopNav />
       <Outlet />
     </ApolloProvider>
   );

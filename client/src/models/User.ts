@@ -1,4 +1,3 @@
-import type { Book } from './Book';
 
 export interface User {
   _id: string | null;

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 
 import type { User } from '../models/User';
 import Auth from '../utils/auth';
@@ -11,6 +11,10 @@ import { QUERY_ME } from '../utils/queries';
 const UserDashboard = () => {
   const { loading, data } = useQuery(QUERY_ME);
   const user: User = data?.me || {};
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   const handleLogout = async () => {
     // get token

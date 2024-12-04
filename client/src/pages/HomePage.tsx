@@ -1,4 +1,14 @@
 import { Link } from 'react-router-dom'
+import { Button } from "@/components/ui/button"
+
+// export default function Home() {
+//   return (
+//     <div>
+//       <Button>Click me</Button>
+//     </div>
+//   )
+// }
+
 
 const HomePage = () => {
   return (
@@ -18,9 +28,10 @@ const HomePage = () => {
           </button>
         </Link>
         <Link to="/dashboard">
-          <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-4'>
+          {/* <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-4'>
             Dashboard
-          </button>
+          </button> */}
+          <Button>Dashboard</Button>
         </Link>
       </div>
     </div>
